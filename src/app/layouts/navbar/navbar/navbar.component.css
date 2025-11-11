@@ -1,0 +1,4 @@
+/* No hace falta casi nada, todo es DaisyUI */
+.navbar a {
+  transition: 0.2s ease;
+}

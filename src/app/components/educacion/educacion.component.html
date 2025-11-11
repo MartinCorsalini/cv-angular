@@ -1,0 +1,72 @@
+<section id="educacion" class="py-16 px-4 max-w-6xl mx-auto">
+  <div class="card bg-base-100 shadow-xl" appScrollReveal [animationClass]="'fade-in-up'">
+    <div class="card-body">
+      <h2 class="card-title text-4xl font-bold text-primary mb-6 border-b-4 border-primary pb-4">
+        {{ translate('titulo.educacion') }}
+      </h2>
+      
+      <!-- Educación Formal -->
+      <div class="space-y-6 mb-12">
+        <div class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow"
+             appScrollReveal [animationClass]="'fade-in-up'" [delay]="100">
+          <div class="card-body">
+            <h3 class="card-title text-2xl text-primary">
+              {{ translate('educacion.1.titulo') }}
+            </h3>
+            <p class="text-base-content/70 italic">
+              {{ translate('educacion.1.lugar') }}
+            </p>
+            <p class="text-lg">{{ translate('educacion.1.descripcion') }}</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow"
+             appScrollReveal [animationClass]="'fade-in-up'" [delay]="200">
+          <div class="card-body">
+            <h3 class="card-title text-2xl text-primary">
+              {{ translate('educacion.2.titulo') }}
+            </h3>
+            <p class="text-base-content/70 italic">
+              {{ translate('educacion.2.lugar') }}
+            </p>
+            <p class="text-lg text-justify">{{ translate('educacion.2.descripcion') }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Idiomas -->
+      <h2 class="card-title text-4xl font-bold text-primary mb-6 border-b-4 border-primary pb-4"
+          appScrollReveal [animationClass]="'fade-in-up'" [delay]="300">
+        {{ translate('titulo.idiomas') }}
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow"
+             appScrollReveal [animationClass]="'fade-in-up'" [delay]="400">
+          <div class="card-body">
+            <h3 class="card-title text-2xl text-primary">
+              {{ translate('idiomas.ingles.titulo') }}
+            </h3>
+            <p class="text-base-content/70 italic">
+              {{ translate('idiomas.ingles.lugar') }}
+            </p>
+            <p class="text-lg">{{ translate('idiomas.ingles.descripcion') }}</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow"
+             appScrollReveal [animationClass]="'fade-in-up'" [delay]="500">
+          <div class="card-body">
+            <h3 class="card-title text-2xl text-primary">
+              {{ translate('idiomas.aleman.titulo') }}
+            </h3>
+            <p class="text-base-content/70 italic">
+              {{ translate('idiomas.aleman.lugar') }}
+            </p>
+            <p class="text-lg">{{ translate('idiomas.aleman.descripcion') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
