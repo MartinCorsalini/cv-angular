@@ -1,20 +1,29 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../layouts/navbar/navbar/navbar.component';
+import { CommonModule } from '@angular/common';
 import { PerfilComponent } from '../../components/perfil/perfil.component';
-import { ContactoComponent } from '../../components/contacto/contacto.component';
-import { EducacionComponent } from '../../components/educacion/educacion.component';
-import { HabilidadesComponent } from '../../components/habilidades/habilidades.component';
-import { ProyectosComponent } from '../../components/proyectos/proyectos.component';
 import { SobreMiComponent } from '../../components/sobre-mi/sobre-mi.component';
-import { FooterComponent } from '../../layouts/footer/footer/footer.component';
+import { HabilidadesComponent } from '../../components/habilidades/habilidades.component';
+import { EducacionComponent } from '../../components/educacion/educacion.component';
+import { ProyectosComponent } from '../../components/proyectos/proyectos.component';
+import { ContactoComponent } from '../../components/contacto/contacto.component';
 
 @Component({
   selector: 'app-inicio-page',
   standalone: true,
-  imports: [PerfilComponent,ContactoComponent,EducacionComponent,HabilidadesComponent,ProyectosComponent,SobreMiComponent],
+  imports: [
+    CommonModule,
+    PerfilComponent,
+    SobreMiComponent,
+    HabilidadesComponent,
+    EducacionComponent,
+    ProyectosComponent,
+    ContactoComponent
+  ],
   templateUrl: './inicio-page.component.html',
-  styleUrl: './inicio-page.component.css'
+  styleUrls: ['./inicio-page.component.css']
 })
 export class InicioPageComponent {
-
+  constructor() {
+    console.log('InicioPageComponent cargado'); // Debug
+  }
 }

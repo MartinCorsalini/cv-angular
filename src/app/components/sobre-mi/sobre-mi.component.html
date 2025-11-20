@@ -1,20 +1,48 @@
-<section id="sobre-mi" class="py-16 px-4 max-w-6xl mx-auto">
-  <div class="card bg-base-100 shadow-xl" appScrollReveal [animationClass]="'fade-in-up'">
-    <div class="card-body">
-      <h2 class="card-title text-4xl font-bold text-primary mb-6 border-b-4 border-primary pb-4">
+<section id="sobre-mi" class="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="card bg-base-100 shadow-xl"
+       appScrollReveal
+       [animationClass]="'fade-in-up'">
+    <div class="card-body p-4 sm:p-6 lg:p-8">
+
+      <!-- Título -->
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
         {{ translate('titulo.sobreMi') }}
       </h2>
-      <div class="space-y-4 text-lg leading-relaxed">
-        <p class="text-justify" appScrollReveal [animationClass]="'fade-in-up'" [delay]="100">
-          {{ translate('sobreMi.1') }}
-        </p>
-        <p class="text-justify" appScrollReveal [animationClass]="'fade-in-up'" [delay]="200">
-          {{ translate('sobreMi.2') }}
-        </p>
-        <p class="text-justify" appScrollReveal [animationClass]="'fade-in-up'" [delay]="300">
-          {{ translate('sobreMi.3') }}
-        </p>
+
+      <div class="divider divider-primary my-2 sm:my-4"></div>
+
+      <!-- Contenido -->
+      <div class="space-y-4 sm:space-y-6">
+
+        <!-- Párrafo 1 -->
+        <div appScrollReveal
+             [animationClass]="'fade-in-up'"
+             [delay]="100">
+          <p class="text-sm sm:text-base lg:text-lg leading-relaxed text-justify">
+            {{ translate('sobreMi.1') }}
+          </p>
+        </div>
+
+        <!-- Párrafo 2 -->
+        <div appScrollReveal
+             [animationClass]="'fade-in-up'"
+             [delay]="200">
+          <p class="text-sm sm:text-base lg:text-lg leading-relaxed text-justify">
+            {{ translate('sobreMi.2') }}
+          </p>
+        </div>
+
+        <!-- Párrafo 3 -->
+        <div appScrollReveal
+             [animationClass]="'fade-in-up'"
+             [delay]="300">
+          <p class="text-sm sm:text-base lg:text-lg leading-relaxed text-justify">
+            {{ translate('sobreMi.3') }}
+          </p>
+        </div>
+
       </div>
+
     </div>
   </div>
 </section>

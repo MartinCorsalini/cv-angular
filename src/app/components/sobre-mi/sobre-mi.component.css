@@ -1,0 +1,17 @@
+/* Mejorar legibilidad en móviles */
+.text-justify {
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* En móviles muy pequeños, usar alineación izquierda */
+@media (max-width: 480px) {
+  .text-justify {
+    text-align: left;
+  }
+}
+
+/* Mejorar la legibilidad del divider */
+.divider-primary {
+  opacity: 0.8;
+}

@@ -4,18 +4,18 @@
       <h2 class="card-title text-4xl font-bold text-primary mb-6 border-b-4 border-primary pb-4">
         {{ translate('titulo.proyectos') }}
       </h2>
-      
+
       <div class="grid md:grid-cols-2 gap-8">
-        <div 
-          *ngFor="let proyecto of proyectos; let i = index" 
+        <div
+          *ngFor="let proyecto of proyectos; let i = index"
           class="card bg-base-200 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
-          appScrollReveal 
-          [animationClass]="'fade-in-up'" 
+          appScrollReveal
+          [animationClass]="'fade-in-up'"
           [delay]="i * 200"
         >
           <figure class="px-4 pt-4">
-            <img 
-              [src]="'assets/images/' + proyecto.imagen" 
+            <img
+              [src]="'assets/images/' + proyecto.imagen"
               [alt]="proyecto.titulo"
               class="rounded-xl h-48 w-full object-contain"
             />
@@ -23,12 +23,13 @@
           <div class="card-body">
             <h3 class="card-title text-2xl justify-center text-primary">
               {{ proyecto.titulo }}
+              <br>
               <div *ngIf="proyecto.enDesarrollo" class="badge badge-secondary">Próximamente</div>
             </h3>
             <p class="text-justify">{{ proyecto.descripcion }}</p>
-            
+
             <div class="card-actions justify-center mt-4">
-              <button 
+              <button
                 class="btn btn-primary"
                 (click)="openModal(proyecto)"
               >
@@ -46,24 +47,24 @@
 <dialog #projectModal class="modal" [class.modal-open]="modalOpen">
   <div class="modal-box max-w-5xl" *ngIf="selectedProject">
     <form method="dialog">
-      <button 
+      <button
         class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
         (click)="closeModal()"
       >✕</button>
     </form>
-    
+
     <div class="flex flex-col lg:flex-row gap-6">
       <!-- Video o Imagen -->
       <div class="lg:w-1/2">
-        <video 
-          *ngIf="selectedProject.video" 
-          [src]="selectedProject.video" 
-          controls 
+        <video
+          *ngIf="selectedProject.video"
+          [src]="selectedProject.video"
+          controls
           class="w-full rounded-lg"
         ></video>
-        <img 
+        <img
           *ngIf="!selectedProject.video"
-          [src]="'assets/images/' + selectedProject.imagen" 
+          [src]="'assets/images/' + selectedProject.imagen"
           [alt]="selectedProject.titulo"
           class="w-full rounded-lg"
         />
@@ -77,9 +78,9 @@
         <div *ngIf="selectedProject.colaboradores && selectedProject.colaboradores.length > 0">
           <strong class="text-lg">Colaboradores:</strong>
           <div class="flex flex-wrap gap-2 mt-2">
-            <a 
+            <a
               *ngFor="let col of selectedProject.colaboradores"
-              [href]="col.linkedin || '#'" 
+              [href]="col.linkedin || '#'"
               target="_blank"
               class="badge badge-lg badge-outline hover:badge-primary"
             >
@@ -91,7 +92,7 @@
         <div *ngIf="selectedProject.tecnologias && selectedProject.tecnologias.length > 0">
           <strong class="text-lg">Tecnologías:</strong>
           <div class="flex flex-wrap gap-2 mt-2">
-            <span 
+            <span
               *ngFor="let tech of selectedProject.tecnologias"
               class="badge badge-lg badge-primary"
             >
@@ -101,8 +102,8 @@
         </div>
 
         <div *ngIf="selectedProject.github" class="mt-6">
-          <a 
-            [href]="selectedProject.github" 
+          <a
+            [href]="selectedProject.github"
             target="_blank"
             class="btn btn-neutral gap-2"
           >

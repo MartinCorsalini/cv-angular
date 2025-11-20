@@ -1,0 +1,27 @@
+/* Asegurar que la imagen del avatar sea circular y responsive */
+.avatar img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Mejorar la legibilidad del texto en móviles */
+@media (max-width: 640px) {
+  h1 {
+    line-height: 1.2;
+    word-break: break-word;
+  }
+}
+
+/* Animación suave para el scroll indicator */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}

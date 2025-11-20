@@ -1,19 +1,84 @@
-<section class="hero min-h-[50vh] bg-base-200">
-  <div class="hero-content text-center">
-    <div class="max-w-2xl">
-      <div class="avatar mb-8" appScrollReveal [animationClass]="'fade-in-up'" [delay]="0">
-        <div class="w-64 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4 shadow-2xl">
-          <img src="assets/images/fotoPerfil.jpg" alt="Martin Ibañez Corsalini" />
+<section class="hero min-h-[60vh] lg:min-h-[70vh] bg-base-200">
+  <div class="hero-content text-center px-4 py-8 lg:py-16">
+    <div class="max-w-4xl w-full">
+      <!-- Avatar con animación -->
+      <div class="flex justify-center mb-6 lg:mb-8"
+           appScrollReveal
+           [animationClass]="'fade-in-up'"
+           [delay]="0">
+        <div class="avatar">
+          <div class="w-60 sm:w-68 md:w-76 lg:w-100 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 lg:ring-offset-4 shadow-2xl">
+            <img src="assets/images/fotoPerfil.jpg"
+                 alt="Martin Ibañez Corsalini"
+                 class="object-cover" />
+          </div>
         </div>
       </div>
-      <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-          appScrollReveal [animationClass]="'fade-in-up'" [delay]="200">
+
+      <!-- Nombre con gradiente -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 lg:mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent px-4"
+          appScrollReveal
+          [animationClass]="'fade-in-up'"
+          [delay]="200">
         Martin Ezequiel Ibañez Corsalini
       </h1>
-      <p class="text-2xl font-semibold text-base-content/80"
-         appScrollReveal [animationClass]="'fade-in-up'" [delay]="400">
-        {{ translate('profesion') }}
-      </p>
+
+      <!-- Profesión con badge -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 px-4"
+           appScrollReveal
+           [animationClass]="'fade-in-up'"
+           [delay]="400">
+        <div class="badge badge-primary badge-lg text-base sm:text-lg px-4 py-3 sm:px-6 sm:py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+          {{ translate('profesion') }}
+        </div>
+      </div>
+
+      <!-- Botones de acción rápida (opcional) -->
+      <div class="flex flex-wrap justify-center gap-3 mt-6 lg:mt-8 px-4"
+           appScrollReveal
+           [animationClass]="'fade-in-up'"
+           [delay]="600">
+        <a href="#contacto" class="btn btn-primary btn-sm sm:btn-md gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="hidden sm:inline">Contactar</span>
+          <span class="sm:hidden">Contacto</span>
+        </a>
+
+        <a href="#proyectos" class="btn btn-outline btn-primary btn-sm sm:btn-md gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+          </svg>
+          <span class="hidden sm:inline">Ver Proyectos</span>
+          <span class="sm:hidden">Proyectos</span>
+        </a>
+
+        <a href="assets/images/Martin Ezequiel Ibañez Corsalini - CV.pdf"
+           download="Martin_Ibanez_CV.pdf"
+           class="btn btn-secondary btn-sm sm:btn-md gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span class="hidden sm:inline">Descargar CV</span>
+          <span class="sm:hidden">CV</span>
+        </a>
+      </div>
+
+      <!-- Scroll indicator (opcional pero moderno) -->
+      <div class="mt-8 lg:mt-12 animate-bounce"
+           appScrollReveal
+           [animationClass]="'fade-in'"
+           [delay]="800">
+        <a href="#sobre-mi" class="text-base-content/50 hover:text-primary transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>

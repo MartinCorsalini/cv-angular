@@ -1,0 +1,84 @@
+/* Cards con tamaño uniforme */
+.skill-card {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .skill-card {
+    min-height: 200px;
+  }
+}
+
+/* Hover suave y elegante - solo box-shadow para no conflictuar */
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor de imagen con tamaño fijo y padding uniforme */
+.skill-card figure {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .skill-card figure {
+    min-height: 112px;
+    padding: 1.5rem;
+  }
+}
+
+/* Imágenes con tamaño exacto y uniforme */
+.skill-image {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .skill-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Mejorar el hover de las tabs */
+.tabs .tab {
+  transition: all 0.3s ease;
+}
+
+.tabs .tab:hover:not(.tab-active) {
+  background-color: hsl(var(--b3));
+}
+
+/* Asegurar que las cards mantengan su estructura */
+.card-body {
+  flex-shrink: 0;
+}
+
+/* Badges con mejor legibilidad */
+.badge-outline {
+  border-width: 1.5px;
+  font-weight: 600;
+}
+
+/* Centrar tabs en móvil */
+@media (max-width: 640px) {
+  .tabs {
+    justify-content: center;
+  }
+
+  .tab {
+    flex: 0 1 auto;
+  }
+}
+
